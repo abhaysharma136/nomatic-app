@@ -1,38 +1,78 @@
 .App {
-  text-align: center;
+  background-color: #8566aa;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.todoListContainer {
+  background-color: white;
+  width: 400px;
+  height: 600px;
+  border-radius: 15px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  gap: 10px;
+}
+
+.toDoListHeadingContainer {
+  background-color: #8566aa;
+  height: 40px;
+  margin-top: 20px;
+  font-size: 28px;
+  text-align: center;
   color: white;
+  width: 100%;
 }
 
-.App-link {
-  color: #61dafb;
+.addTaskInput {
+  border: none;
+  border-bottom: #8566aa;
+  width: 90%;
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.addButton {
+  border-radius: 50%;
+  border: none;
+  width: 40px;
+  aspect-ratio: 1;
+  background-color: #8566aa;
+  color: white;
+  font-size: 24px;
+}
+
+.addButton:hover {
+  background-color: aquamarine;
+}
+
+.todoTaskDiv {
+  width: 90%;
+  height: 400px;
+  overflow-y: auto;
+}
+
+.taskInnerDiv {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+}
+
+.editContainer {
+  width: 200px;
+  height: 280px;
+  background-color: aliceblue;
+  border-radius: 25px;
+}
+
+.editContainer h2 {
+  text-align: center;
 }

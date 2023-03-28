@@ -1,0 +1,18 @@
+.editTaskContainer {
+    width: 400px;
+    height: 300px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px
+}
+
+.saveButton {
+    border-radius: 20px;
+    background-color: #8566aa;
+    border: none;
+    color: white;
+    width: 70%;
+}
