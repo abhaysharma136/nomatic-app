@@ -1,2 +1,2 @@
-// export const API = `https://node-streaming-app.vercel.app`;
-export const API = `http://localhost:5000`;
+export const API = `https://nodenomaticapp.onrender.com`;
+// export const API = `http://localhost:4000`;

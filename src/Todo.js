@@ -7,7 +7,7 @@ import { useNavigate } from "react-router-dom";
 
 export function Todo() {
   function GetTasks() {
-    const res = fetch(`${API}/todoItem`, {
+    const res = fetch(`${API}/tasks`, {
       method: "GET",
     });
     res.then((data) => data.json()).then((mvs) => setTaskList(mvs));
@@ -30,7 +30,7 @@ export function Todo() {
   };
   const AddTask = async (userData) => {
     try {
-      await fetch(`${API}/todoItem/add`, {
+      await fetch(`${API}/tasks/add`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(userData),
@@ -77,7 +77,7 @@ export function Todo() {
 function DisplayTask({ taskdata }) {
   const deleteTask = async (taskId) => {
     try {
-      await fetch(`${API}/todoItem/${taskId}`, {
+      await fetch(`${API}/tasks/${taskId}`, {
         method: "DELETE",
       }).then((response) => {
         response.json().then((data) => {

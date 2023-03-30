@@ -6,9 +6,10 @@ import { API } from "./global";
 
 export function EditTask() {
   const { id } = useParams();
+  console.log(id);
   const [taskData, setTaskData] = useState();
   function GetTasks() {
-    const res = fetch(`${API}/todoItem/${id}`, {
+    const res = fetch(`${API}/tasks/${id}`, {
       method: "GET",
     });
     res.then((data) => data.json()).then((mvs) => setTaskData(mvs));
@@ -30,12 +31,13 @@ function DisplayEditForm({ taskData }) {
   const [name, setName] = useState(taskData.task);
   const navigate = useNavigate();
   const newtask = {
-    userId: "6364b9539000a8d9476257c6",
+    userId: "106",
     task: name,
     completed: false,
   };
+
   function updateTask(newtask) {
-    fetch(`${API}/todoItem/${taskData._id}`, {
+    fetch(`${API}/tasks/${taskData._id}`, {
       method: "PUT",
       body: JSON.stringify(newtask),
       headers: {
